@@ -1,0 +1,35 @@
+{
+    "name": "hls-googledrive",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "npm run prod",
+        "server": "node ./dist-server/bin/www",
+        "prod": "NODE_ENV=production npm-run-all build server",
+        "build": "npm run clean && babel ./ --ignore node_modules --out-dir ./dist --copy-files",
+        "clean": "rimraf dist"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.6",
+        "@babel/node": "^7.8.4",
+        "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+        "@babel/plugin-transform-runtime": "^7.8.3",
+        "@babel/polyfill": "^7.8.3",
+        "@babel/preset-env": "^7.8.6",
+        "@babel/runtime": "^7.8.4",
+        "bluebird": "^3.7.2",
+        "bull": "^3.13.0",
+        "fluent-ffmpeg": "^2.1.2",
+        "googleapis": "^47.0.0",
+        "mongodb": "^3.5.4",
+        "mongoose": "^5.9.4",
+        "nodemon": "^2.0.2",
+        "promise": "^8.0.3",
+        "redis": "^3.0.2",
+        "request-promise": "^4.2.5",
+        "rimraf": "^3.0.2",
+        "throng": "^4.0.0",
+        "uuid": "^7.0.1"
+    }
+}
