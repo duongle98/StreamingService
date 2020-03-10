@@ -1,0 +1,7 @@
+credentials
+node_modules
+package-lock.json
+dist
+*.mp4
+*.ts
+*.m3u8
